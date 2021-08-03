@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import MainMenuButton from './components/MainMenuButton';
+import './TitleStyling.css';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className ='background-image'>
+      <div className='main-title'>Ofek's Chess Game</div>
+      <div className='sub-title'>This game is made with Java and React.js</div>
+      <MainMenuButton></MainMenuButton>
     </div>
   );
 }
