@@ -1,4 +1,4 @@
-import "../TitleStyling.css";
+import "./TitleStyling.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const GitLinkedButtons = () => {
@@ -18,7 +18,7 @@ const GitLinkedButtons = () => {
         style={{
           position: "absolute",
           left: "53%",
-          top: "70%",
+          top: "62%",
           transform: "translate(-50%, -50%)",
         }} onClick={GitClickHandler}
       >
@@ -29,7 +29,7 @@ const GitLinkedButtons = () => {
         style={{
           position: "absolute",
           left: "47%",
-          top: "70%",
+          top: "62%",
           transform: "translate(-50%, -50%)",
         }} onClick={LinkedClickHandler}
       >
