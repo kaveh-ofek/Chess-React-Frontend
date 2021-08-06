@@ -6,20 +6,26 @@ const NewGamePage = () => {
     const history = useHistory();
 
     let side = history.location.state.side;
-    if (side === '1')
+    if (side === '1' || side === '')
     {
         side = 'white';
     }
-    else
+    if (side === '2')
     {
-        side = 'black'
+        side = 'black';
     }
-    const time = parseInt(history.location.state.time);
-    const level = parseInt(history.location.state.level);
 
-    if (side === '' || isNaN(time) || isNaN(level))
+    let time = history.location.state.time;
+    let level = history.location.state.level;
+
+    if (time === '')
     {
-        history.push('/newgame_settings');
+        time=parseInt('10');
+    }
+
+    if (level === '')
+    {
+        level=parseInt('5');
     }
 
     return (

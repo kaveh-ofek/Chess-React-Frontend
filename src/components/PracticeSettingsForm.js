@@ -9,11 +9,19 @@ const PracticeSettingForm = () => {
   const [selectedTime, setTime] = useState("");
 
   const whiteSideChangeHandler = (event) => {
-    setSide("1");
+    if (selectedSide === '')
+    {
+      event.target.style.backgroundColor = "rgb(2, 48, 109)"
+      setSide("1");
+    }
   };
 
   const blackSideChangeHandler = (event) => {
-    setSide("2");
+    if (selectedSide === '')
+    {
+      event.target.style.backgroundColor = "rgb(2, 48, 109)"
+      setSide("2");
+    }
   };
 
   const timeChangeHandler = (event) => {
@@ -35,14 +43,14 @@ const PracticeSettingForm = () => {
     <form onSubmit={submitHandler}>
       <div className="new-settings__controls">
         <div className="new-settings__control">
-          <div>Choose Between Black Pieces And White Pieces</div>
-          <button
+          <div>Choose Your Side:</div>
+          <button id='white'
             className="white-button"
             onClick={whiteSideChangeHandler} type='button'
           >
             <FaChessKing color="white" size="2rem"></FaChessKing>
           </button>
-          <button
+          <button id='black'
             className="black-button"
             onClick={blackSideChangeHandler} type='button'
           >
@@ -52,7 +60,7 @@ const PracticeSettingForm = () => {
 
         <div>
           <div>
-            <FaClock color="#2c2c2c" size="1.5rem"></FaClock> Select Time For Each Side: (1-10)
+            <FaClock color="#2c2c2c" size="1.5rem"></FaClock> Time: (1-10)
           </div>
           <input
             type="range"

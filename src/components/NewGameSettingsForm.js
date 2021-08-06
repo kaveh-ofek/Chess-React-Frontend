@@ -10,11 +10,19 @@ const NewGameSettingForm = () => {
   const [selectedLevel, setLevel] = useState("");
 
   const whiteSideChangeHandler = (event) => {
-    setSide("1");
+    if (selectedSide === '')
+    {
+      event.target.style.backgroundColor = "rgb(2, 48, 109)"
+      setSide("1");
+    }
   };
 
   const blackSideChangeHandler = (event) => {
-    setSide("2");
+    if (selectedSide === '')
+    {
+      event.target.style.backgroundColor = "rgb(2, 48, 109)"
+      setSide("2");
+    }
   };
 
   const timeChangeHandler = (event) => {
@@ -39,7 +47,7 @@ const NewGameSettingForm = () => {
     <form onSubmit={submitHandler}>
       <div className="new-settings__controls">
         <div className="new-settings__control">
-          <div>Choose Between Black Pieces And White Pieces</div>
+          <div>Choose Your Side:</div>
           <button className="white-button" onClick={whiteSideChangeHandler} type='button'>
             <FaChessKing color="white" size="2rem"></FaChessKing>
           </button>
@@ -50,8 +58,7 @@ const NewGameSettingForm = () => {
 
         <div>
           <div>
-            <FaClock color="#2c2c2c" size="1.5rem"></FaClock> Select Time For
-            Each Side: (1-10)
+            <FaClock color="#2c2c2c" size="1.5rem"></FaClock> Time: (1-10)
           </div>
           <input
             type="range"
@@ -64,8 +71,7 @@ const NewGameSettingForm = () => {
 
         <div>
           <div>
-            <FaRobot color="#2c2c2c" size="1.5rem"></FaRobot> Select Wanted
-            Level: (1-5)
+            <FaRobot color="#2c2c2c" size="1.5rem"></FaRobot> Difficulty: (1-5)
           </div>
           <input
             type="range"

@@ -6,19 +6,22 @@ const PracticePage = () => {
     const history = useHistory();
 
     let side = history.location.state.side;
-    if (side === '1')
+    if (side === '1' || side === '')
     {
         side = 'white';
     }
-    else{
-        side = 'black'
-    }
-    const time = parseInt(history.location.state.time);
-
-    if (side === '' || isNaN(time))
+    if (side === '2')
     {
-        history.push('/practice_settings');
+        side = 'black';
     }
+    
+    let time = history.location.state.time;
+
+    if (time === '')
+    {
+        time=parseInt('10');
+    }
+    
 
     return (
         <div>
