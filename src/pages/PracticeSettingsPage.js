@@ -1,10 +1,11 @@
 import Header from "../components/Header";
+import PracticeSettings from "../components/PracticeSettings";
 
 const PracticeSettingsPage = () => {
     return (
         <div>
             <Header></Header>
-            <h1>This is Practice Settings Page</h1>
+            <PracticeSettings></PracticeSettings>
         </div>
     )
 

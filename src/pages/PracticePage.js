@@ -1,6 +1,11 @@
+import Header from "../components/Header";
+
 const PracticePage = () => {
     return (
-        <div>This is thew Practice Page</div>
+        <div>
+            <Header></Header>
+            <div>This is the Practice Page</div>
+        </div>
     )
 }
 

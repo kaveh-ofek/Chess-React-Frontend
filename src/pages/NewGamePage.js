@@ -1,6 +1,11 @@
+import Header from "../components/Header";
+
 const NewGamePage = () => {
     return (
-        <div>This is thew New Game Page</div>
+        <div>
+            <Header></Header>
+            <div>This is thew New Game Page</div>
+        </div>
     )
 }
 
