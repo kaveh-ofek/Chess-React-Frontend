@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import { useHistory } from "react-router-dom";
 import "../components/TitleStyling.css";
+import Board from "../components/Board";
 
 const PracticePage = () => {
     const history = useHistory();
@@ -26,8 +27,9 @@ const PracticePage = () => {
     return (
         <div>
             <Header></Header>
-            <div className='sub-title'>{side}</div>
-            <div className='sub-title'>{time}</div>
+            <div className='board'>
+            <Board></Board>
+            </div>
         </div>
     )
 }
