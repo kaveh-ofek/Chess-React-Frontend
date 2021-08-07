@@ -8,6 +8,7 @@ import NewGamePage from "./pages/NewGamePage";
 import AboutMePage from "./pages/AboutMePage";
 
 function App() {
+
   return (
     <div>
       <Route path='/' exact>

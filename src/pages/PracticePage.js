@@ -2,8 +2,10 @@ import Header from "../components/Header";
 import { useHistory } from "react-router-dom";
 import "../components/TitleStyling.css";
 import Board from "../components/Board";
+import {Game} from "./logic/Game";
 
 const PracticePage = () => {
+
     const history = useHistory();
 
     let side = history.location.state.side;
@@ -22,7 +24,6 @@ const PracticePage = () => {
     {
         time=parseInt('10');
     }
-    
 
     return (
         <div>

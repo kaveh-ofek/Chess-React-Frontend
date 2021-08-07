@@ -4,11 +4,14 @@
 }
 
 .black-tile {
+    display: grid;
+    place-content: center;
     background-color: #779556;
 
 }
 
 .white-tile {
+    display: grid;
+    place-content: center;
     background-color: #ebecd0;
-
 }
