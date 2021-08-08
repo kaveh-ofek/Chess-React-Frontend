@@ -1,14 +1,7 @@
 import React from 'react';
 import "./Board.css"
 import Tile from "./Tile";
-import {Bishop} from "../pages/logic/Bishop";
-import {King} from "../pages/logic/King";
-import {Knight} from "../pages/logic/Knight";
-import {Pair} from "../pages/logic/Pair";
-import {Pawn} from "../pages/logic/Pawn";
 import {PlayerSpecifier} from "../pages/logic/PlayerSpecifier";
-import {Queen} from "../pages/logic/Queen";
-import {Rook} from "../pages/logic/Rook";
 import { GameBoard } from '../pages/logic/GameBoard';
 
 const cols = ['1', '2', '3', '4', '5', '6', '7', '8'];
@@ -17,18 +10,77 @@ const cols = ['1', '2', '3', '4', '5', '6', '7', '8'];
 
 const board = () => {
 
-    let gameBoard = new GameBoard();
+    let gameBoard = new GameBoard().gameBoard;
     let graphicBoard = []
-    for(let j = cols.length - 1; j >= 0; j--)
+    for(let j = 0; j < cols.length; j++)
     {
         for(let i = 0; i < rows.length; i++)
         {
-            let image = "icons/pawn_b.png";
+            let image;
+            if (gameBoard[j][i] === null)
+            {
+                image = null;
+            }
+            else if(gameBoard[j][i].playerNumber === PlayerSpecifier.FIRST)
+            {
+                if (gameBoard[j][i].constructor.name === 'Pawn')
+                {
+                    image = "icons/pawn_w.png";
+                }
+                if (gameBoard[j][i].constructor.name === 'Knight')
+                {
+                    image = "icons/knight_w.png";
+                }
+                if (gameBoard[j][i].constructor.name === 'Bishop')
+                {
+                    image = "icons/bishop_w.png";
+                }
+                if (gameBoard[j][i].constructor.name === 'Rook')
+                {
+                    image = "icons/rook_w.png";
+                }
+                if (gameBoard[j][i].constructor.name === 'Queen')
+                {
+                    image = "icons/queen_w.png";
+                }
+                if (gameBoard[j][i].constructor.name === 'King')
+                {
+                    image = "icons/king_w.png";
+                }
+            }
+
+            else
+            {
+                if (gameBoard[j][i].constructor.name === 'Pawn')
+                {
+                    image = "icons/pawn_b.png";
+                }
+                if (gameBoard[j][i].constructor.name === 'Knight')
+                {
+                    image = "icons/knight_b.png";
+                }
+                if (gameBoard[j][i].constructor.name === 'Bishop')
+                {
+                    image = "icons/bishop_b.png";
+                }
+                if (gameBoard[j][i].constructor.name === 'Rook')
+                {
+                    image = "icons/rook_b.png";
+                }
+                if (gameBoard[j][i].constructor.name === 'Queen')
+                {
+                    image = "icons/queen_b.png";
+                }
+                if (gameBoard[j][i].constructor.name === 'King')
+                {
+                    image = "icons/king_b.png";
+                }
+            }
             graphicBoard.push(<Tile number={i + j + 2} img={image}></Tile>)
         }
     }
 
-    //coordinate in this 1dim array:  location= y * 8 + (x + 1)
+
 
     return (
         <div className='chess-board'>

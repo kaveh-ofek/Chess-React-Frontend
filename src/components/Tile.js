@@ -5,13 +5,13 @@ const Tile = (props) => {
     if (props.number % 2 === 0)
     {
         return (
-            <div className='black-tile'><img src={props.img}></img></div>
+            <div className='white-tile'><img src={props.img} alt=""></img></div>
         )
     }
     else
     {
         return (
-            <div className='white-tile'></div>
+            <div className='black-tile'><img src={props.img} alt=""></img></div>
         )
     }
 }

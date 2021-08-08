@@ -6,7 +6,7 @@
 .black-tile {
     display: grid;
     place-content: center;
-    background-color: #779556;
+    background-color: rgb(6, 104, 231);
 
 }
 
