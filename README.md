@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Website for playing chess - in particular for playing vs bots and for playing vs yourself.
+
+## Game is not implemented
+
 ## Available Scripts
 
 In the project directory, you can run:
