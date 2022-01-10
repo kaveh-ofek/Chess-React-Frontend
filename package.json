@@ -2,7 +2,7 @@
   "name": "react-complete-guide",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kaveh-ofek.github.io/Chess-React-Frontend"
+  "homepage": "https://kaveh-ofek.github.io/Chess-React-Frontend",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
